@@ -1,0 +1,40 @@
+{
+  "name": "Contact",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the person"
+    },
+    "relationship": {
+      "type": "string",
+      "enum": [
+        "date",
+        "friend",
+        "colleague",
+        "networking",
+        "other"
+      ],
+      "description": "Your relationship with this person"
+    },
+    "occupation": {
+      "type": "string",
+      "description": "Their job or occupation"
+    },
+    "hobbies": {
+      "type": "string",
+      "description": "Comma-separated hobbies and interests"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about this person"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "Avatar image URL"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
