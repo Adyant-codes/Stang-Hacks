@@ -1,0 +1,72 @@
+{
+  "name": "Session",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Session title"
+    },
+    "session_type": {
+      "type": "string",
+      "enum": [
+        "date",
+        "networking",
+        "casual",
+        "interview",
+        "presentation",
+        "other"
+      ],
+      "description": "Type of social interaction"
+    },
+    "contact_id": {
+      "type": "string",
+      "description": "ID of linked contact"
+    },
+    "contact_name": {
+      "type": "string",
+      "description": "Name of the person in conversation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active"
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Full conversation transcript"
+    },
+    "tips_given": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string"
+          },
+          "tip": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "List of tips provided during session"
+    },
+    "context_notes": {
+      "type": "string",
+      "description": "Extra context provided before session"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Duration of the session in seconds"
+    }
+  },
+  "required": [
+    "title",
+    "session_type"
+  ]
+}
